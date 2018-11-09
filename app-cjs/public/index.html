@@ -11,29 +11,7 @@
 
   <p id='names'></p>
 
-  <script type="module">
-    import {Linq} from './javascripts/jslinq.js';
-
-    let data = {
-      characters: [
-        { name: 'Ryker', level: 11, class: 'fighter', race: 'human' },
-        { name: 'Drizzt', level: 13, class: 'fighter', race: 'dwarf' },
-        { name: 'Tsukune', level: 9, class: 'rogue', race: 'human' },
-        { name: 'Cloud', level: 11, class: 'sorcerer', race: 'elf' },
-        { name: 'Bash', level: 12, class: 'cleric', race: 'human' }
-      ]
-    };
-
-    let selectedCharacters = Linq.from(data.characters)
-      .where(x => x.race === 'human')
-      .orderBy(x => x.level)
-      .select(x => x.name)
-      .toArray();
-
-    let element = document.getElementById('names');
-
-    element.innerText = selectedCharacters.join(', ');
-  </script>
+  <script src="javascripts/bundle.js"></script>
 </body>
 
 </html>
