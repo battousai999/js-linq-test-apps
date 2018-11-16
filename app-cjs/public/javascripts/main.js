@@ -1,4 +1,3 @@
-require('babel-polyfill');
 var Linq = require('js-linq').Linq;
 
 var data = {
