@@ -3,12 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build": "npx copyfiles -f node_modules/js-linq/jslinq.js public/javascripts"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
+    "js-linq": "file:../../js-linq.tar.gz",
     "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.1.0"
   }
 }
